@@ -6,9 +6,9 @@
 A north-bluish dark theme based on the same named [color palette](https://github.com/arcticicestudio/northem) designed by [Arctic Ice Studio](http://arcticicestudio.com).
 This is a darker and more blue-tinged variation.
 
-[![Northem](res/image/northem-dark.png)](http://arcticicestudio.com/Northem)
+![Northem](https://raw.githubusercontent.com/arcticicestudio/northem-dark-atom-ui/master/res/image/northem-dark.png)
 
-[![Northem](res/image/preview-screenshot.png)](http://arcticicestudio.com/Northem)
+![Northem](https://raw.githubusercontent.com/arcticicestudio/northem-dark-atom-ui/master/res/image/northem-dark.png)
 
 ### Variations
 Also available as:
