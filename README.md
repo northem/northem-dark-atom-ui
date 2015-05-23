@@ -8,7 +8,7 @@ This is a darker and more blue-tinged variation.
 
 ![Northem](https://raw.githubusercontent.com/arcticicestudio/northem-dark-atom-ui/master/res/image/northem-dark.png)
 
-![Northem](https://raw.githubusercontent.com/arcticicestudio/northem-dark-atom-ui/master/res/image/northem-dark.png)
+![Northem](https://raw.githubusercontent.com/arcticicestudio/northem-dark-atom-ui/master/res/image/preview-screenshot.png)
 
 ### Variations
 Also available as:
