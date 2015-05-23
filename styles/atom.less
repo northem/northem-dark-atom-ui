@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+}
+
+/*
+ * =============
+ * = WORKSPACE =
+ * =============
+ */
+atom-workspace {
+	padding-right: @component-padding/2;
+	background-color: @app-background-color;
+
+	atom-panel-container.left:empty {
+		padding-left: @component-padding/2;
+	}
+}
+
+/*
+ * =============
+ * = SCROLLBAR =
+ * =============
+ */
+.scrollbars-visible-always {
+	/deep/ ::-webkit-scrollbar {
+		width: @size-scrollbar-width;
+		height: @size-scrollbar-height;
+	}
+
+	/deep/ ::-webkit-scrollbar-track {
+		background: @color-scrollbar-background;
+	}
+
+	/deep/ ::-webkit-scrollbar-thumb {
+		border-radius: @component-padding;
+		border: 3px solid @color-scrollbar-background;
+		background: @color-scrollbar;
+		background-clip: content-box;
+	}
+
+	/deep/ ::-webkit-scrollbar-corner {
+		background: @color-scrollbar-background;
+	}
+
+	/deep/ ::-webkit-scrollbar-thumb:vertical:active {
+		border-radius: 0;
+		border-left-width: 0;
+		border-right-width: 0;
+	}
+
+	/deep/ ::-webkit-scrollbar-thumb:horizontal:active {
+		border-radius: 0;
+		border-top-width: 0;
+		border-bottom-width: 0;
+	}
+}
+
+/*
+ * =========
+ * = CARET =
+ * =========
+ */
+.caret {
+  border-top: 5px solid #FFFFFF;
+  margin-top: -1px;
+}

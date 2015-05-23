@@ -1,0 +1,120 @@
+.settings-view {
+	/*
+	 * ========
+	 * = MENU =
+	 * ========
+	 */
+	.config-menu {
+		position: relative;
+		min-width: @font-size*15;
+		max-width: @font-size*20;
+		border-width: 0 1px 0 0;
+		border-image: linear-gradient(@color-settings-view-section-background 10px, @color-settings-view-section-border 200px) 0 1 0 0 stretch;
+		background: @color-settings-view-config-menu-background;
+
+		.btn {
+			white-space: initial;
+			font-size: @size-modularscale-1;
+			line-height: 1;
+			padding: @component-padding/3 @component-padding/2;
+			&::before {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.nav {
+		& > li > a {
+			padding: @component-padding/2 @component-padding;
+			line-height: @component-line-height;
+		}
+	}
+	/*
+	 * ===========
+	 * = SECTION =
+	 * ===========
+	 */
+	.section-container {
+		max-width: @font-size*60;
+	}
+	.sub-section {
+		margin: @component-padding*3 0;
+	}
+
+	.section,
+	.section:first-child,
+	.section:last-child {
+		border-color: @color-settings-view-section-border;
+		background: @color-settings-view-section-background;
+		padding: @component-padding*3;
+	}
+
+	/*
+	 * =============
+	 * = CONTAINER =
+	 * =============
+	 */
+	.package-container {
+		.package-status {
+			&.icon {
+				&.icon-check:before {
+					color: @color-icon-check;
+				}
+				&.icon-cloud-download:before {
+					color: @color-icon-cloud-download;
+				}
+			}
+		}
+	}
+
+	.themes-panel .control-group {
+		margin-top: @component-padding*2;
+	}
+	/*
+	 * =========
+	 * = TITLE =
+	 * =========
+	 */
+	.section .section-heading {
+		margin-bottom: @component-padding/1.5;
+	}
+
+	.sub-section-heading.icon:before,
+	.section-heading.icon:before {
+		margin-right: @component-icon-padding;
+	}
+	/*
+	 * ========
+	 * = CARD =
+	 * ========
+	 */
+	.package-card {
+		border-color: @color-settings-view-card-border;
+		border-width: 3px 3px 3px 3px;
+		padding: @component-padding;
+		.meta-controls .status-indicator {
+			width: @component-padding/4;
+			&:before {
+				content: "\00a0";
+			}
+		}
+	}
+	/*
+	 * =============
+	 * = COMPONENT =
+	 * =============
+	 */
+	.icon::before {
+		color: @text-color-subtle;
+	}
+
+	.editor-container {
+		margin: @component-padding 0;
+	}
+
+	.form-control {
+		font-size: @font-size*1.25;
+		height: @font-size*2.5;
+	}
+
+}

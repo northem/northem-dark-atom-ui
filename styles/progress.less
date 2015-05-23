@@ -1,0 +1,73 @@
+/*
+ * ===========
+ * = SPINNER =
+ * ===========
+ */
+.loading-spinner(@size) {
+  width: @size;
+  height: @size;
+  display: block;
+
+  background-image: url(images/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.inline-block {
+    display: inline-block;
+  }
+}
+
+.loading-spinner-large {
+  .loading-spinner(64px);
+}
+
+.loading-spinner-medium {
+  .loading-spinner(50px);
+}
+
+.loading-spinner-small {
+  .loading-spinner(32px);
+}
+
+.loading-spinner-tiny {
+  .loading-spinner(20px);
+}
+
+
+/*
+ * =======
+ * = BAR =
+ * =======
+ */
+progress {
+  -webkit-appearance: none;
+  height: @size-progress-height;
+  border-radius: @component-border-radius;
+
+  background-color: @input-background-color;
+  box-shadow: inset 0 0 0 1px @input-border-color;
+
+  background-image:
+     linear-gradient(-45deg, transparent 33%, @color-progress-buffer 33%,
+                             @color-progress-buffer 66%, transparent 66%);
+  background-size: 25px @size-progress-height, 100% 100%, 100% 100%;
+  -webkit-animation: animate-stripes 5s linear infinite;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  border-radius: @component-border-radius;
+  background-color: @color-progress-background;
+}
+
+progress[value] {
+  background-image: none;
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes animate-stripes {
+   100% { background-position: -100px 0px; }
+}

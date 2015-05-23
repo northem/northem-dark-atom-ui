@@ -1,0 +1,162 @@
+/*
+*********************************************************
+* package:    find-and-replace                          *
+* author:     atom                                      *
+* home:       https://atom.io/packages/find-and-replace *
+* version:    0.160.0                                   *
+*********************************************************
+*/
+.find-and-replace {
+
+  .btn,
+  .btn-group-options.btn-group .btn,
+  .btn-group-options.btn-group .btn.option-selection,
+  .btn-group-options.btn-group .btn.option-whole-word {
+    font-size: @font-size*1.25;
+    padding: 0;
+  }
+
+  .btn-group {
+    &.btn-group-options {
+      width: @font-size * 10;
+      display: flex;
+      & > .btn {
+        flex: 1;
+      }
+      .btn.option-selection {
+        padding-top: 0;
+      }
+    }
+    &.btn-group-replace-all {
+      width: @font-size * 10;
+    }
+    &.btn-group-find,
+    &.btn-group-replace {
+      width: @font-size * 7.5;
+    }
+  }
+
+  .find-meta-container {
+    top: @font-size*.35;
+  }
+}
+
+
+/*
+*****************************
+* package:    markdown-find *
+*****************************
+*/
+.project-find {
+  .btn,
+  .btn-group.btn-group-options .btn {
+    font-size: @font-size*1.25;
+    padding: 0;
+  }
+  .btn-group {
+    &.btn-group-replace-all,
+    &.btn-group-options {
+      width: @font-size * 10;
+    }
+  }
+}
+
+
+/*
+*********************************************************
+* package:    markdown-preview                          *
+* author:     atom                                      *
+* home:       https://atom.io/packages/markdown-preview *
+* version:    0.148.0                                   *
+*********************************************************
+*/
+.markdown-preview {
+  font-size: @font-size*1.25;
+  color: @color-packagesupport-markdown-preview-text;
+  background-color: @color-packagesupport-markdown-preview-background;
+
+
+  h1, h2 {
+    color: inherit;
+    border-color: @base-border-color;
+  }
+
+  a {
+    color: @color-packagesupport-markdown-preview-element-link;
+  }
+
+  hr {
+    background-color: @color-packagesupport-markdown-preview-element-hr;
+  }
+
+  blockquote {
+    color: @text-color;
+    border-left-color: @text-color-subtle;
+  }
+
+  code {
+    color: @color-packagesupport-markdown-preview-element-code;
+    border-color: @base-border-color;
+    background-color: @color-packagesupport-markdown-preview-background-code;
+    background-clip: padding-box;
+  }
+
+  atom-text-editor::shadow {
+    .line.cursor-line {
+      background-color: transparent;
+    }
+  }
+}
+
+.tab.active[data-type="MarkdownPreviewView"] {
+  background-color: @color-packagesupport-markdown-preview-background;
+  &:after {
+    border-bottom-color: @color-packagesupport-markdown-preview-background;
+  }
+}
+
+/*
+**********************************************************
+* package:    atom-html-preview                          *
+* author:     webBoxio                                   *
+* home:       https://atom.io/packages/atom-html-preview *
+* version:    0.1.6                                      *
+**********************************************************
+*/
+.atom-html-preview {
+  font-size: @font-size*1.25;
+  color: @color-packagesupport-atom-html-preview-text;
+  background-color: @color-packagesupport-atom-html-preview-background;
+
+
+  h1, h2 {
+    color: inherit;
+    border-color: @base-border-color;
+  }
+
+  a {
+    color: @color-packagesupport-atom-html-preview-element-link;
+  }
+
+  hr {
+    background-color: @color-packagesupport-atom-html-preview-element-hr;
+  }
+
+  blockquote {
+    color: @text-color;
+    border-left-color: @text-color-subtle;
+  }
+
+  code {
+    color: @color-packagesupport-atom-html-preview-element-code;
+    border-color: @base-border-color;
+    background-color: @color-packagesupport-atom-html-preview-background-code;
+    background-clip: padding-box;
+  }
+
+  atom-text-editor::shadow {
+    .line.cursor-line {
+      background-color: transparent;
+    }
+  }
+}

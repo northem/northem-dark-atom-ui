@@ -1,0 +1,32 @@
+.status-bar {
+  font-size: @font-size;
+  height: @size-statusbar-height;
+  line-height: @size-statusbar-height;
+
+  .flexbox-repaint-hack {
+    padding: 0 @size-statusbar-padding/2;
+  }
+
+  .inline-block {
+    margin-right: @size-statusbar-padding;
+    vertical-align: top;
+  }
+  .pull-right {
+    .inline-block {
+      margin-right: 0;
+      margin-left: @size-statusbar-padding;
+      & > .inline-block {
+        margin-left: 0;
+      }
+    }
+    .icon {
+      margin-right: @size-statusbar-padding/4;
+    }
+  }
+
+  .icon::before {
+    font-size: 16px;
+  	width: 16px;
+    height: 16px;
+  }
+}

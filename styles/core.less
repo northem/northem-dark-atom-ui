@@ -1,0 +1,94 @@
+/*
+ * ================
+ * = PREVIEW PANE =
+ * ================
+ */
+.preview-pane .results-view .path-match-number {
+  color: inherit;
+  opacity: .6;
+}
+
+/*
+ * ==============
+ * = TOOL PANEL =
+ * ==============
+ */
+.tool-panel.incompatible-packages {
+  .text(normal);
+  background-color: @color-base-background;
+}
+
+/*
+ * =================
+ * = NOTIFICATIONS =
+ * =================
+ */
+atom-notifications {
+  font-size: 14px;
+  atom-notification {
+    &:first-child.has-close .message {
+      padding-right: 120px;
+    }
+    &:only-child.has-close .message,
+    &.has-close .message {
+      padding-right: 40px;
+    }
+    .item {
+      padding: @component-padding/2;
+    }
+    &.icon:before {
+      padding-top: .85em;
+    }
+  }
+}
+
+/*
+ * ==============
+ * = STYLEGUIDE =
+ * ==============
+ */
+.styleguide {
+  padding: 0;
+
+  section.bordered,
+  .section.bordered {
+    border-top: none;
+    padding: @size-styleguide-padding;
+  }
+
+  .example {
+    border: none;
+
+    .example-rendered {
+      border: 1px solid @base-border-color;
+      border-right: none;
+      background: @base-background-color;
+    }
+
+    .example-code {
+      border: 1px solid @base-border-color;
+      border-radius: 0 @component-border-radius @component-border-radius 0;
+    }
+  }
+
+  [data-name="variables"] .example-rendered {
+    border-right: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
+
+  atom-panel.modal:after {
+    position: absolute;
+    left: -@component-padding;
+    right: -@component-padding;
+    bottom: -@component-padding;
+  }
+
+  atom-panel.modal:after {
+    position: absolute;
+  }
+
+  .select-list atom-text-editor[mini],
+  .popover-list atom-text-editor[mini] {
+    height: initial;
+  }
+}

@@ -1,0 +1,231 @@
+/*
+* ############################
+* ########## COLORS ##########
+* ############################
+*/
+
+/*
+ * ==============
+ * = BACKGROUND =
+ * ==============
+ */
+@color-background-highlight:      @coal;
+@color-background-selected:       @color-base-accent;
+@color-background-level-info:     saturate(@blue,6%);
+@color-background-level-success:  saturate(@lime,6%);
+@color-background-level-warning:  saturate(@yellow,6%);
+@color-background-level-error:    saturate(@red,6%);
+
+/*
+ * =========
+ * = BADGE =
+ * =========
+ */
+@color-badge-background: @light-coal;
+
+/*
+ * ========
+ * = BASE =
+ * ========
+ */
+@color-base-accent:     @dark-blue;
+@color-base-background: @darkest-coal;
+@color-base-border:     @dark-coal;
+
+/*
+ * ==========
+ * = BUTTON =
+ * ==========
+ */
+@color-button-background:                               @dark-blue;
+@color-button-background-hover:                         lighten(@color-button-background,2%);
+@color-button-background-selected:                      lighten(@color-button-background,2%);
+@color-button-text-selected:                            @color-text-highlight;
+@color-button-color-text-highlight:                     lighten(@color-text-highlight,20%);
+@color-button-specific-settings-view-background:        @coal;
+@color-button-specific-settings-view-background-hover:  @darkest-coal;
+
+/*
+ * ========
+ * = DIFF =
+ * ========
+ */
+@color-diff-ignored:  @color-text-faded;
+@color-diff-renamed:  @yellow;
+@color-diff-added:    @lime;
+@color-diff-modified: @blue;
+@color-diff-removed:  @red;
+
+/*
+ * ========
+ * = ICON =
+ * ========
+ */
+@color-icon-trashcan:         @red;
+@color-icon-check:            @lime;
+@color-icon-cloud-download:   @blue;
+@color-icon-gear:             @white;
+@color-icon-playback-play:    @lime;
+@color-icon-playback-pause:   @yellow;
+
+/*
+ * =========
+ * = INPUT =
+ * =========
+ */
+@color-input-background:            darken(@darkest-coal, 5%);
+@color-input-background-focus:      fadein(@color-input-background, 6%);
+@color-input-selected:              darken(@color-background-selected, 6%);
+@color-input-selected-focus:        @color-background-selected;
+@color-input-selected-editor-mini:  @dark-blue;
+@color-input-selected-border:       @dark-blue;
+
+/*
+ * ==============
+ * = KEYBINDING =
+ * ==============
+ */
+@color-keybinding-background: @coal;
+@color-keybinding-border:     @blue;
+
+/*
+ * ===========
+ * = OVERLAY =
+ * ===========
+ */
+@color-overlay-background-backdrop-hue: hue(@coal);
+@color-overlay-background-backdrop:     rgba(37,37,38,.6);
+
+/*
+ * =========
+ * = PANEL =
+ * =========
+ */
+@color-panel-inset-background:  lighten(@darkest-coal, 4%);
+@color-panel-inset-border:      fadeout(@darkest-coal, 15%);
+@color-panel-background:        @darkest-coal;
+
+/*
+ * ============
+ * = PROGRESS =
+ * ============
+ */
+@color-progress-background: @color-base-accent;
+@color-progress-buffer:     fade(@color-base-accent, 20%);
+
+/*
+ * =============
+ * = SCROLLBAR =
+ * =============
+ */
+@color-scrollbar:             @coal;
+@color-scrollbar-background:  darken(@darkest-coal, 3%);
+
+/*
+ * =================
+ * = SETTINGS-VIEW =
+ * =================
+ */
+@color-settings-view-card-border:             @darkest-coal;
+@color-settings-view-config-menu-background:  @dark-coal;
+@color-settings-view-section-background:      @dark-coal;
+@color-settings-view-section-border:          @coal;
+
+/*
+ * ========
+ * = SITE =
+ * ========
+ */
+@color-site-1:  @lime;
+@color-site-2:  @blue;
+@color-site-3:  @yellow;
+@color-site-4:  @red;
+@color-site-5:  @orange;
+
+/*
+ * =======
+ * = TAB =
+ * =======
+ */
+@color-tab-background:            @darkest-coal;
+@color-tab-background-editor:     @coal;
+@color-tab-background-dragged:    darken(@color-tab-background, 8%);
+@color-tab-bar-background:        @color-base-background;
+@color-tab-text:                  @color-text-subtle;
+@color-tab-text-active:           @color-text-highlight;
+@color-tab-text-editor:           @color-text-highlight;
+@color-tab-icon:                  @color-text-subtle;
+@color-tab-icon-hover:            @color-base-accent;
+@color-tab-icon-hover-modified:   @red;
+
+/*
+ * ========
+ * = TEXT =
+ * ========
+ */
+@color-text:                @dirty-white;
+@color-text-selected:       @dirty-white;
+@color-text-highlight:      lighten(@color-text,5%);
+@color-text-faded:          fade(@color-text, 20%);
+@color-text-subtle:         fadeout(@color-text, 40%);
+@color-text-level-info:     @blue;
+@color-text-level-success:  @lime;
+@color-text-level-warning:  @yellow;
+@color-text-level-error:    @red;
+
+/*
+ * ===========
+ * = TOOLTIP =
+ * ===========
+ */
+@color-tooltip-background:      @dark-blue;
+@color-tooltip-background-key:  @dark-blue;
+@color-tooltip-text:            @dirty-white;
+@color-tooltip-text-key:        @dirty-white;
+
+/*
+ * ============
+ * = TREEVIEW =
+ * ============
+ */
+@color-treeview-background:           @darkest-coal;
+@color-treeview-background-selected:  @coal;
+@color-treeview-text-project:         @blue;
+@color-treeview-text-project-hover:   lighten(@color-treeview-text-project,8%);
+
+
+/*
+* ####################################
+* ########## PACKAGESUPPORT ##########
+* ####################################
+*/
+
+/*
+*********************************************************
+* package:    markdown-preview                          *
+* author:     atom                                      *
+* home:       https://atom.io/packages/markdown-preview *
+* version:    0.148.0                                   *
+*********************************************************
+*/
+@color-packagesupport-markdown-preview-text:            @dirty-white;
+@color-packagesupport-markdown-preview-background:      @color-base-background;
+@color-packagesupport-markdown-preview-background-code: @coal;
+@color-packagesupport-markdown-preview-element-hr:      @color-base-border;
+@color-packagesupport-markdown-preview-element-code:    @blue;
+@color-packagesupport-markdown-preview-element-link:    @blue;
+
+/*
+**********************************************************
+* package:    atom-html-preview                          *
+* author:     webBoxio                                   *
+* home:       https://atom.io/packages/atom-html-preview *
+* version:    0.1.6                                      *
+**********************************************************
+*/
+@color-packagesupport-atom-html-preview-text:             @dirty-white;
+@color-packagesupport-atom-html-preview-background:       @color-base-background;
+@color-packagesupport-atom-html-preview-background-code:  @coal;
+@color-packagesupport-atom-html-preview-element-hr:       @color-base-border;
+@color-packagesupport-atom-html-preview-element-code:     @blue;
+@color-packagesupport-atom-html-preview-element-link:     @blue;

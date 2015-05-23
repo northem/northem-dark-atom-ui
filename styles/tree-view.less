@@ -1,0 +1,80 @@
+.tree-view {
+  font-size: @font-size;
+  background: @tree-view-background-color;
+
+  /*
+   * ================
+   * = PROJECT ROOT =
+   * ================
+   */
+  .project-root.project-root {
+    padding-top: @component-padding/2;
+    &:before {
+      height: @tab-height;
+      border-top: 1px solid transparent;
+      background-clip: padding-box;
+    }
+    & > .header .name {
+      line-height: @tab-height;
+      font-size: @size-treeview-project;
+      color: @color-treeview-text-project;
+    }
+    & > .header:hover .name:hover {
+      color: @color-treeview-text-project-hover;
+    }
+    &:focus {
+      background: @background-color-highlight;
+    }
+  }
+
+  .selected:before {
+    background: @background-color-highlight !important;
+  }
+
+  &:focus {
+    .selected:before {
+      background: @blue;
+    }
+  }
+}
+
+.tree-view-resizer {
+  .tree-view-resize-handle {
+    width: 8px;
+  }
+}
+
+
+/*
+ * =====================
+ * = EMS-BASED HEIGHTS =
+ * =====================
+ */
+.list-group li:not(.list-nested-item),
+.list-tree li:not(.list-nested-item),
+.list-group li.list-nested-item > .list-item,
+.list-tree li.list-nested-item > .list-item {
+  line-height: @size-treeview-height;
+}
+
+.list-group .selected::before,
+.list-tree .selected::before {
+  height: @size-treeview-height;
+}
+
+/*
+ * ========
+ * = ICON =
+ * ========
+ */
+.list-group .icon,
+.list-tree .icon {
+  display: inline-block;
+  height: inherit;
+  &::before {
+    top: initial;
+    line-height: inherit;
+    height: inherit;
+    vertical-align: top;
+  }
+}
