@@ -1,0 +1,236 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Buttons                         +
+project   northem-dark-atom-ui            +
+file      buttons.less                    +
+version                                   +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:02 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines button specific style classes.
+
+[Index]
+  (1) Default
+  (2) Group
+    (2.0) Sizes
+    (2.1) Specified Task
+  (3) Main Class
+  (4) Variant
+    (4.0) Information Level
+
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Default                                                                [1] +
+   +----------------------------------------------------------------------------+ */
+.btn-default (@color, @hover-color, @selected-color, @text-color) {
+  color: @text-color;
+  text-shadow: none;
+  border: @size-button-border;
+  background-color: @color;
+  background-image: linear-gradient(lighten(@color, 2%), @color);
+
+  &.selected {
+    background: @selected-color;
+  }
+  &.selected:focus,
+  &.selected:hover {
+    background: lighten(@selected-color, 2%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:focus,
+  &:hover {
+    color: @text-color-highlight;
+    background-image: linear-gradient(lighten(@hover-color, 2%), @hover-color);
+  }
+  &:active {
+    background: darken(@color, 4%);
+    box-shadow: none;
+  }
+}
+
+.btn,
+.btn.btn-default {
+  .btn-default(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
+}
+/* +------------------------------------------------------------------------[1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Group                                                                  [2] +
+   +----------------------------------------------------------------------------+ */
+.btn-group {
+  border: none;
+}
+
+.btn-group > .btn {
+  border-left: none !important;
+  border-right: none !important;
+  z-index: 0;
+
+  &.btn:focus {
+    z-index: 1;
+  }
+  &.selected,
+  &.selected:first-child,
+  &.selected:last-child {
+    color: @color-button-text-selected;
+    border: 1px solid @color-button-background-selected;
+  }
+  &.selected + .btn {
+    border-left-color: @color-button-background-selected;
+  }
+
+  &:hover {
+    z-index: 0;
+  }
+  &:first-child {
+    border-left: @size-button-border;
+  }
+  &:last-child {
+    border-right: @size-button-border;
+  }
+}
+/* +----------------------------------------------------------------------------+
+   + Group - Sizes                                                        [2.0] +
+   +----------------------------------------------------------------------------+ */
+.btn.btn-xs,
+.btn-group-xs > .btn {
+  font-size: @font-size*.8;
+  line-height: @component-line-height;
+  padding: @size-button-padding;
+}
+.btn.btn-sm,
+.btn-group-sm > .btn {
+  font-size: @font-size*.9;
+  line-height: @component-line-height;
+  padding: @size-button-padding;
+}
+.btn.btn-lg,
+.btn-group-lg > .btn {
+  font-size: @font-size * 1.5;
+  line-height: @component-line-height;
+  padding: @size-button-padding;
+}
+/* +----------------------------------------------------------------------[2.0]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Group - Specified Task                                               [2.1] +
+   +----------------------------------------------------------------------------+ */
+.btn-group > .btn {
+
+  &.settings,
+  &.uninstall,
+  &.enablement {
+    background: @color-button-specifiedtask-settings-view-background;
+  }
+
+  &.settings:hover {
+    background: @color-button-specifiedtask-settings-view-background-hover;
+
+    &.icon-gear:before {
+      color: @color-icon-gear;
+    }
+  }
+
+  &.uninstall:hover {
+    background: @color-button-specifiedtask-settings-view-background-hover;
+
+    &.icon-trashcan:before {
+      color: @color-icon-trashcan;
+    }
+  }
+
+  &.enablement:hover {
+    background: @color-button-specifiedtask-settings-view-background-hover;
+
+    &.icon-playback-play:before {
+      color: @color-icon-playback-play;
+    }
+    &.icon-playback-pause:before {
+      color: @color-icon-playback-pause;
+    }
+  }
+}
+/* +----------------------------------------------------------------------[2.1]-+ */
+/* +------------------------------------------------------------------------[2]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Main Class                                                             [3] +
+   +----------------------------------------------------------------------------+ */
+.btn {
+  height: initial;
+  padding: @size-button-padding;
+}
+/* +------------------------------------------------------------------------[3]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Variant                                                                [4] +
+   +----------------------------------------------------------------------------+ */
+.btn-variant (@color) {
+  color: @text-color;
+  text-shadow: 0 1px 0 hsla(0,0%,0%,.2);
+
+  @text-color: @color-button-color-text-highlight;
+  @bg: @color;
+  @hover: lighten(@bg, 3%);
+  @selected: saturate(darken(@bg, 12%), 20%);
+  .btn-default(@bg, @hover, @selected, @text-color-highlight);
+
+  &.icon:before {
+    color: @text-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: @text-color;
+  }
+}
+/* +----------------------------------------------------------------------------+
+   + Variant - Information Level                                          [4.0] +
+   +----------------------------------------------------------------------------+ */
+.btn.btn-primary {
+  .btn-variant(@color-base-accent);
+}
+.btn.btn-info {
+  .btn-variant(@background-color-info);
+}
+.btn.btn-success {
+  .btn-variant(@background-color-success);
+}
+.btn.btn-warning {
+  .btn-variant(@background-color-warning);
+}
+.btn.btn-error {
+  .btn-variant(@background-color-error);
+}
+/* +----------------------------------------------------------------------[4.0]-+ */
+/* +------------------------------------------------------------------------[4]-+ */
