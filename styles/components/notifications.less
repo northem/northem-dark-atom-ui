@@ -1,0 +1,66 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Notifications                   +
+project   northem-dark-atom-ui            +
+file      notifications.less              +
+version                                   +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-28 16:27 UTC+0200       +
+modified  2016-02-06 22:07 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines notification specific style classes.
+
+[Index]
+  (1) Core
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Notification - Core                                                    [1] +
+   +----------------------------------------------------------------------------+ */
+  atom-notifications {
+    font-size: 14px;
+
+    atom-notification {
+      &:first-child.has-close .message {
+        padding-right: 120px;
+      }
+
+      &:only-child.has-close .message,
+      &.has-close .message {
+        padding-right: 40px;
+      }
+      &.icon:before {
+        padding-top: .85em;
+      }
+
+      .item {
+        padding: @component-padding/2;
+      }
+    }
+  }
+/* +------------------------------------------------------------------------[1]-+ */
