@@ -1,0 +1,265 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Colors                          +
+project   northem-dark-atom-ui            +
+file      colors.less                     +
+version                                   +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:40 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines all UI- and package specific color variables.
+
+[Index]
+  (1) Core
+    (1.0) Background
+    (1.1) Badge
+    (1.2) Base
+    (1.3) Button
+    (1.4) Caret
+    (1.5) Diff
+    (1.6) Icon
+    (1.7) Input
+    (1.8) Keybinding
+    (1.9) Overlay
+    (1.10) Panel
+    (1.11) Progress
+    (1.12) Scrollbar
+    (1.13) Settings-View
+    (1.14) Site
+    (1.15) Tab
+    (1.16) Text
+    (1.17) Tooltip
+    (1.18) Treeview
+  (2) Package Support
+    (2.0) autocomplete-plus
+    (2.1) markdown-preview
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Core                                                                   [1] +
+   +----------------------------------------------------------------------------+ */
+/* +----------------------------------------------------------------------------+
+   + Core - Background                                                    [1.0] +
+   +----------------------------------------------------------------------------+ */
+@color-background-highlight:     @coal;
+@color-background-selected:      @color-base-accent;
+@color-background-level-info:    saturate(@blue,6%);
+@color-background-level-success: saturate(@lime,6%);
+@color-background-level-warning: saturate(@yellow,6%);
+@color-background-level-error:   saturate(@red,6%);
+/* +----------------------------------------------------------------------[1.0]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Badge                                                         [1.1] +
+   +----------------------------------------------------------------------------+ */
+@color-badge-background: @light-coal;
+/* +----------------------------------------------------------------------[1.1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Base                                                          [1.2] +
+   +----------------------------------------------------------------------------+ */
+@color-base-accent:     @dark-blue;
+@color-base-background: @darkest-coal;
+@color-base-border:     @dark-coal;
+/* +----------------------------------------------------------------------[1.2]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Button                                                        [1.3] +
+   +----------------------------------------------------------------------------+ */
+@color-button-background:                                   @dark-blue;
+@color-button-background-hover:                             lighten(@color-button-background,2%);
+@color-button-background-selected:                          lighten(@color-button-background,2%);
+@color-button-text-selected:                                @color-text-highlight;
+@color-button-color-text-highlight:                         lighten(@color-text-highlight,20%);
+@color-button-specifiedtask-settings-view-background:       @coal;
+@color-button-specifiedtask-settings-view-background-hover: @darkest-coal;
+/* +----------------------------------------------------------------------[1.3]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Caret                                                         [1.4] +
+   +----------------------------------------------------------------------------+ */
+@color-caret: #FFFFFF;
+/* +----------------------------------------------------------------------[1.4]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Diff                                                          [1.5] +
+   +----------------------------------------------------------------------------+ */
+@color-diff-ignored:  @color-text-faded;
+@color-diff-renamed:  @yellow;
+@color-diff-added:    @lime;
+@color-diff-modified: @blue;
+@color-diff-removed:  @red;
+/* +----------------------------------------------------------------------[1.5]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Icon                                                          [1.6] +
+   +----------------------------------------------------------------------------+ */
+@color-icon-trashcan:       @red;
+@color-icon-check:          @lime;
+@color-icon-cloud-download: @blue;
+@color-icon-gear:           @white;
+@color-icon-playback-play:  @lime;
+@color-icon-playback-pause: @yellow;
+@color-icon-heart:          @red;
+/* +----------------------------------------------------------------------[1.6]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Input                                                         [1.7] +
+   +----------------------------------------------------------------------------+ */
+@color-input-background:           darken(@darkest-coal, 5%);
+@color-input-background-focus:     fadein(@color-input-background, 6%);
+@color-input-selected:             darken(@color-background-selected, 6%);
+@color-input-selected-focus:       @color-background-selected;
+@color-input-selected-editor-mini: @dark-blue;
+@color-input-selected-border:      @dark-blue;
+/* +----------------------------------------------------------------------[1.7]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Keybinding                                                    [1.8] +
+   +----------------------------------------------------------------------------+ */
+@color-keybinding-background: @coal;
+@color-keybinding-border:     @blue;
+/* +----------------------------------------------------------------------[1.8]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Overlay                                                       [1.9] +
+   +----------------------------------------------------------------------------+ */
+@color-overlay-background-backdrop-hue: hue(@coal);
+@color-overlay-background-backdrop:     rgba(37,37,38,.6);
+/* +----------------------------------------------------------------------[1.9]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Panel                                                        [1.10] +
+   +----------------------------------------------------------------------------+ */
+@color-panel-inset-background: lighten(@darkest-coal, 4%);
+@color-panel-inset-border:     fadeout(@darkest-coal, 15%);
+@color-panel-background:       @darkest-coal;
+/* +---------------------------------------------------------------------[1.10]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Progress                                                     [1.11] +
+   +----------------------------------------------------------------------------+ */
+@color-progress-background: @color-base-accent;
+@color-progress-buffer:     fade(@color-base-accent, 20%);
+/* +---------------------------------------------------------------------[1.11]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Scrollar                                                     [1.12] +
+   +----------------------------------------------------------------------------+ */
+@color-scrollbar:            @coal;
+@color-scrollbar-background: darken(@darkest-coal, 3%);
+/* +---------------------------------------------------------------------[1.12]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Settings-View                                                [1.13] +
+   +----------------------------------------------------------------------------+ */
+@color-settings-view-card-border:            @darkest-coal;
+@color-settings-view-config-menu-background: @dark-coal;
+@color-settings-view-section-background:     @dark-coal;
+@color-settings-view-section-border:         @coal;
+/* +---------------------------------------------------------------------[1.13]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Site                                                         [1.14] +
+   +----------------------------------------------------------------------------+ */
+@color-site-1: @lime;
+@color-site-2: @blue;
+@color-site-3: @yellow;
+@color-site-4: @red;
+@color-site-5: @orange;
+/* +---------------------------------------------------------------------[1.14]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Tab                                                          [1.15] +
+   +----------------------------------------------------------------------------+ */
+@color-tab-background:          @darkest-coal;
+@color-tab-background-editor:   @coal;
+@color-tab-background-dragged:  darken(@color-tab-background, 8%);
+@color-tab-bar-background:      @color-base-background;
+@color-tab-text:                @color-text-subtle;
+@color-tab-text-active:         @color-text-highlight;
+@color-tab-text-editor:         @color-text-highlight;
+@color-tab-icon:                @color-text-subtle;
+@color-tab-icon-hover:          @color-base-accent;
+@color-tab-icon-hover-modified: @red;
+/* +---------------------------------------------------------------------[1.15]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Text                                                         [1.16] +
+   +----------------------------------------------------------------------------+ */
+@color-text:               @dirty-white;
+@color-text-selected:      @dirty-white;
+@color-text-highlight:     lighten(@color-text,5%);
+@color-text-faded:         fade(@color-text, 20%);
+@color-text-subtle:        fadeout(@color-text, 40%);
+@color-text-level-info:    @blue;
+@color-text-level-success: @lime;
+@color-text-level-warning: @yellow;
+@color-text-level-error:   @red;
+/* +---------------------------------------------------------------------[1.16]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Tooltip                                                      [1.17] +
+   +----------------------------------------------------------------------------+ */
+@color-tooltip-background:     @dark-blue;
+@color-tooltip-background-key: @dark-blue;
+@color-tooltip-text:           @dirty-white;
+@color-tooltip-text-key:       @dirty-white;
+/* +---------------------------------------------------------------------[1.17]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Core - Treeview                                                     [1.18] +
+   +----------------------------------------------------------------------------+ */
+@color-treeview-background:          @darkest-coal;
+@color-treeview-background-selected: @coal;
+@color-treeview-text-project:        @blue;
+@color-treeview-text-project-hover:  lighten(@color-treeview-text-project,8%);
+/* +---------------------------------------------------------------------[1.18]-+ */
+/* +------------------------------------------------------------------------[1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Package Support                                                        [2] +
+   +----------------------------------------------------------------------------+ */
+/* +----------------------------------------------------------------------------+
+   + Package Support - autocomplete-plus                                  [2.0] +
+   +----------------------------------------------------------------------------+ */
+@color-packagesupport-autocomplete-plus-description-background: darken(@color-base-background, 2%);
+/* +----------------------------------------------------------------------[2.0]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Package Support - markdown-preview                                   [2.1] +
+   +----------------------------------------------------------------------------+ */
+@color-packagesupport-markdown-preview-text:            @dirty-white;
+@color-packagesupport-markdown-preview-background:      @color-base-background;
+@color-packagesupport-markdown-preview-background-code: @coal;
+@color-packagesupport-markdown-preview-element-hr:      @color-base-border;
+@color-packagesupport-markdown-preview-element-code:    @blue;
+@color-packagesupport-markdown-preview-element-link:    @blue;
+/* +----------------------------------------------------------------------[2.1]-+ */
+/* +------------------------------------------------------------------------[2]-+ */
