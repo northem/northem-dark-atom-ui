@@ -1,10 +1,10 @@
 {
   "id": "northem-dark-atom-ui",
   "name": "Northem Dark - Atom UI",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "date": {
    "created": "2015-04-02 13:13 UTC+0200",
-   "updated": "2016-04-09 20:24 UTC+0200"
+   "updated": "2016-04-09 20:40 UTC+0200"
   },
   "access": "public",
   "modularity": "subproject",
