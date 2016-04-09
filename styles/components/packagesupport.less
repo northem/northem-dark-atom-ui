@@ -1,0 +1,278 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Package Support                 +
+project   northem-dark-atom-ui            +
+file      packagesupport.less             +
+version                                   +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:08 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines package specific styles based on the matching custom classes.
+
+[Index]
+  (1) autocomplete-plus
+    (1.0) Suggestion List
+      (1.0.0) Scroller
+      (1.0.1) Description
+      > Description
+  (2) find-and-replace
+    (2.0) Button & Button Groups
+    (2.1) Meta Container
+  (3) markdown-preview
+    (3.0) Link
+    (3.1) Atom Text Editor (shadow)
+    (3.2) Blockquote
+    (3.3) Code
+    (3.4) Heading
+    (3.5) Separator
+    (3.6) Tab
+  (4) project-manager
+    (4.0) Button & Button Groups
+
+[Package Support]
+  - autocomplete-plus@^2.25.0 (https://atom.io/packages/autocomplete-plus)
+  - find-and-replace@^0.194.0 (https://atom.io/packages/find-and-replace)
+  - project-manager@^2.7.5    (https://atom.io/packages/project-manager)
+  - markdown-preview@^0.157.0 (https://atom.io/packages/markdown-preview)
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + autocomplete-plus                                                      [1] +
+   +----------------------------------------------------------------------------+ */
+.autocomplete-plus {
+  /* +----------------------------------------------------------------------------+
+     + autocomplete-plus - Suggestion List                                  [1.0] +
+     +----------------------------------------------------------------------------+ */
+  autocomplete-suggestion-list {
+  /* +----------------------------------------------------------------------------+
+     + autocomplete-plus - Suggestion List - Scroller                     [1.0.0] +
+     +----------------------------------------------------------------------------+ */
+    .suggestion-list-scroller {
+      .list-group {
+        .icon-container {
+          .icon {
+            &.class,
+            &.constant,
+            &.property {
+              .packagesupport-autocomplete-icon(@aqua);
+            }
+            &.function,
+            &.method,
+            &.pseudo-selector {
+              .packagesupport-autocomplete-icon(@lime);
+            }
+            &.keyword,
+            &.snippet,
+            &.tag,
+            &.type {
+              .packagesupport-autocomplete-icon(@blue);
+            }
+            &.package,
+            &.value,
+            &.variable {
+              .packagesupport-autocomplete-icon(@dirty-white);
+            }
+            &.builtin,
+            &.import,
+            &.module,
+            &.require {
+              .packagesupport-autocomplete-icon(@dark-blue);
+            }
+            &.mixin {
+              .packagesupport-autocomplete-icon(@orange);
+            }
+          }
+        }
+      }
+    }
+    /* +--------------------------------------------------------------------[1.0.0]-+ */
+
+    /* +----------------------------------------------------------------------------+
+       + autocomplete-plus - Suggestion List - Description                  [1.0.1] +
+       +----------------------------------------------------------------------------+ */
+    .suggestion-description {
+      background: @color-packagesupport-autocomplete-plus-description-background;
+
+      .suggestion-description-content {
+        font-size: @size-text;
+      }
+
+      .suggestion-description-more-link {
+        font-size: @size-text;
+      }
+    }
+    /* +--------------------------------------------------------------------[1.0.1]-+ */
+  }
+  /* +----------------------------------------------------------------------[1.0]-+ */
+}
+/* +------------------------------------------------------------------------[1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + find-and-replace                                                       [2] +
+   +----------------------------------------------------------------------------+ */
+.find-and-replace {
+  /* +----------------------------------------------------------------------------+
+     + find-and-replace - Button & Button Groups                            [2.0] +
+     +----------------------------------------------------------------------------+ */
+  .btn,
+  .btn-group-options.btn-group .btn,
+  .btn-group-options.btn-group .btn.option-selection,
+  .btn-group-options.btn-group .btn.option-whole-word {
+    font-size: @font-size*1.25;
+    padding: 0;
+  }
+
+  .btn-group {
+    &.btn-group-options {
+      width: @font-size * 10;
+      display: flex;
+      & > .btn {
+        flex: 1;
+      }
+      .btn.option-selection {
+        padding-top: 0;
+      }
+    }
+    &.btn-group-replace-all {
+      width: @font-size * 10;
+    }
+    &.btn-group-find,
+    &.btn-group-replace {
+      width: @font-size * 7.5;
+    }
+  }
+  /* +----------------------------------------------------------------------[2.0]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + find-and-replace - Meta Container                                    [2.1] +
+     +----------------------------------------------------------------------------+ */
+  .find-meta-container {
+    top: @font-size*.35;
+  }
+  /* +----------------------------------------------------------------------[2.1]-+ */
+}
+/* +------------------------------------------------------------------------[2]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + markdown-preview                                                       [3] +
+   +----------------------------------------------------------------------------+ */
+.markdown-preview {
+  font-size: @font-size*1.25;
+  color: @color-packagesupport-markdown-preview-text;
+  background-color: @color-packagesupport-markdown-preview-background;
+  /* +----------------------------------------------------------------------------+
+    + markdown-preview - Atom Text Editor (shadow)                         [3.0] +
+    +----------------------------------------------------------------------------+ */
+  atom-text-editor::shadow {
+    .line.cursor-line {
+      background-color: transparent;
+    }
+  }
+  /* +----------------------------------------------------------------------[3.0]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + markdown-preview - Link                                              [3.1] +
+     +----------------------------------------------------------------------------+ */
+  a {
+    color: @color-packagesupport-markdown-preview-element-link;
+  }
+  /* +----------------------------------------------------------------------[3.1]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + markdown-preview - Blockquote                                        [3.2] +
+     +----------------------------------------------------------------------------+ */
+  blockquote {
+    color: @text-color;
+    border-left-color: @text-color-subtle;
+  }
+  /* +----------------------------------------------------------------------[3.2]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + markdown-preview - Code                                              [3.3] +
+     +----------------------------------------------------------------------------+ */
+  code {
+    color: @color-packagesupport-markdown-preview-element-code;
+    border-color: @base-border-color;
+    background-color: @color-packagesupport-markdown-preview-background-code;
+    background-clip: padding-box;
+  }
+  /* +----------------------------------------------------------------------[3.3]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + markdown-preview - Heading                                           [3.4] +
+     +----------------------------------------------------------------------------+ */
+  h1, h2 {
+    color: inherit;
+    border-color: @base-border-color;
+  }
+  /* +----------------------------------------------------------------------[3.4]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + markdown-preview - Separator                                         [3.5] +
+     +----------------------------------------------------------------------------+ */
+  hr {
+    background-color: @color-packagesupport-markdown-preview-element-hr;
+  }
+  /* +----------------------------------------------------------------------[3.5]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + markdown-preview - Tab                                               [3.6] +
+     +----------------------------------------------------------------------------+ */
+  .tab.active[data-type="MarkdownPreviewView"] {
+    background-color: @color-packagesupport-markdown-preview-background;
+
+    &:after {
+      border-bottom-color: @color-packagesupport-markdown-preview-background;
+    }
+  }
+  /* +----------------------------------------------------------------------[3.6]-+ */
+}
+/* +------------------------------------------------------------------------[3]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + project-manager                                                        [4] +
+   +----------------------------------------------------------------------------+ */
+.project-find {
+  /* +----------------------------------------------------------------------------+
+     + project-manager - Button & Button Groups                             [4.0] +
+     +----------------------------------------------------------------------------+ */
+  .btn,
+  .btn-group.btn-group-options .btn {
+    font-size: @font-size*1.25;
+    padding: 0;
+  }
+  .btn-group {
+    &.btn-group-replace-all,
+    &.btn-group-options {
+      width: @font-size * 10;
+    }
+  }
+  /* +----------------------------------------------------------------------[4.0]-+ */
+}
+/* +------------------------------------------------------------------------[4]-+ */
