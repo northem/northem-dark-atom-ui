@@ -1,0 +1,123 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Panels                          +
+project   northem-dark-atom-ui            +
+file      panels.less                     +
+version                                   +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:08 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines panel specific style classes.
+
+[Index]
+  (1) Core
+  (2) Panel
+    (2.0) Inset
+    (2.1) Main Class
+    (2.2) Heading
+    (2.3) Tool
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Core                                                                   [1] +
+   +----------------------------------------------------------------------------+ */
+atom-panel {
+  .text(normal);
+  position: relative;
+}
+
+atom-panel.modal:after {
+  position: absolute;
+  left: -@component-padding;
+  right: -@component-padding;
+  bottom: -@component-padding;
+}
+/* +------------------------------------------------------------------------[1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Panel                                                                  [2] +
+   +----------------------------------------------------------------------------+ */
+/* +----------------------------------------------------------------------------+
+   + Panel - Inset                                                        [2.0] +
+   +----------------------------------------------------------------------------+ */
+.inset-panel {
+  position: relative;
+  background-color: @inset-panel-background-color;
+
+  &.bordered {
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
+  & .panel-heading {
+    border-color: @inset-panel-border-color;
+  }
+}
+/* +----------------------------------------------------------------------[2.0]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Panel - Main Class                                                   [2.1] +
+   +----------------------------------------------------------------------------+ */
+.panel {
+  &.bordered {
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
+}
+/* +----------------------------------------------------------------------[2.1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Panel - Heading                                                      [2.2] +
+   +----------------------------------------------------------------------------+ */
+.panel-heading {
+  .text(normal);
+  border-bottom: 1px solid @panel-heading-border-color;
+  background-color: @panel-heading-background-color;
+
+  .btn {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    @bg: lighten(@button-background-color, 10%);
+    @hover: lighten(@button-background-color-hover, 10%);
+    @selected: lighten(@button-background-color-selected, 10%);
+    @text: lighten(@text-color, 10%);
+    .btn-default(@bg, @hover, @selected, @text);
+  }
+}
+/* +----------------------------------------------------------------------[2.2]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Panel - Tool                                                         [2.3] +
+   +----------------------------------------------------------------------------+ */
+.tool-panel.incompatible-packages {
+  .text(normal);
+  background-color: @color-base-background;
+}
+/* +----------------------------------------------------------------------[2.3]-+ */
+/* +------------------------------------------------------------------------[2]-+ */
