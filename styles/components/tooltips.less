@@ -1,0 +1,97 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Tooltips                        +
+project   northem-dark-atom-ui            +
+file      tooltips.less                   +
+version   0.5.0                           +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:13 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines tooltip specific style classes.
+
+[Index]
+  (1) Tooltip
+    (1.0) Inner
+    (1.1) Keystroke
+    (1.2) Decoration
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Tooltip                                                                [1] +
+   +----------------------------------------------------------------------------+ */
+.tooltip {
+  white-space: nowrap;
+  font-size: @font-size*1.15;
+  /* +----------------------------------------------------------------------------+
+     + Tooltip - Inner                                                      [1.0] +
+     +----------------------------------------------------------------------------+ */
+  &.in {
+    opacity: 1;
+    transition: opacity .12s ease-out;
+  }
+
+  .tooltip-inner {
+    line-height: 1;
+    padding: @component-padding*.5 @component-padding*.65;
+    border-radius: @component-border-radius;
+    background-color: @color-tooltip-background;
+    color: @color-tooltip-text;
+    white-space: nowrap;
+    max-width: none;
+  }
+  /* +----------------------------------------------------------------------[1.0]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + Tooltip - Keystroke                                                  [1.1] +
+     +----------------------------------------------------------------------------+ */
+  .keystroke {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: max(1em, @font-size*.85);
+    padding: .1em .4em;
+    margin: 0 @component-padding*-.35 0 @component-padding*.25;
+    border-radius: max(2px, @component-border-radius / 2);
+    color: @color-tooltip-text-key;
+    background: @color-tooltip-background-key;
+  }
+  /* +----------------------------------------------------------------------[1.1]-+ */
+
+  /* +----------------------------------------------------------------------------+
+     + Tooltip - Decoration                                                 [1.2] +
+     +----------------------------------------------------------------------------+ */
+  &.top .tooltip-arrow { border-top-color: @color-tooltip-background; }
+  &.top-left .tooltip-arrow { border-top-color: @color-tooltip-background; }
+  &.top-right .tooltip-arrow { border-top-color: @color-tooltip-background; }
+  &.right .tooltip-arrow { border-right-color: @color-tooltip-background; }
+  &.left .tooltip-arrow { border-left-color: @color-tooltip-background; }
+  &.bottom .tooltip-arrow { border-bottom-color: @color-tooltip-background; }
+  &.bottom-left .tooltip-arrow { border-bottom-color: @color-tooltip-background; }
+  &.bottom-right .tooltip-arrow { border-bottom-color: @color-tooltip-background; }
+  /* +----------------------------------------------------------------------[1.2]-+ */
+}
+/* +------------------------------------------------------------------------[1]-+ */

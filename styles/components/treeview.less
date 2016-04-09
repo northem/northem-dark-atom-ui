@@ -1,0 +1,130 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Tree View                       +
+project   northem-dark-atom-ui            +
+file      treeview.less                   +
+version   0.5.0                           +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:14 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines style classes for the tree view and all child classes.
+
+[Index]
+  (1) Tree View
+    (1.0) Project Root
+  (2) Tree View Resizer
+  (3) List
+    (3.0) Icon
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Tree View                                                              [1] +
+   +----------------------------------------------------------------------------+ */
+.tree-view {
+  font-size: @font-size;
+  background: @tree-view-background-color;
+
+  .selected:before {
+    background: @background-color-highlight !important;
+  }
+
+  &:focus {
+    .selected:before {
+      background: @blue;
+    }
+  }
+  /* +----------------------------------------------------------------------------+
+     + Tree View - Project Root                                             [1.0] +
+     +----------------------------------------------------------------------------+ */
+  .project-root.project-root {
+    padding-top: @component-padding/2;
+
+    &:before {
+      height: @tab-height;
+      border-top: 1px solid transparent;
+      background-clip: padding-box;
+    }
+    & > .header .name {
+      line-height: @tab-height;
+      font-size: @size-treeview-project;
+      color: @color-treeview-text-project;
+    }
+    & > .header:hover .name:hover {
+      color: @color-treeview-text-project-hover;
+    }
+    &:focus {
+      background: @background-color-highlight;
+    }
+  }
+  /* +----------------------------------------------------------------------[1.0]-+ */
+}
+/* +------------------------------------------------------------------------[1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Tree View Resizer                                                      [2] +
+   +----------------------------------------------------------------------------+ */
+.tree-view-resizer {
+  .tree-view-resize-handle {
+    width: 8px;
+  }
+}
+/* +------------------------------------------------------------------------[2]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + List                                                                   [3] +
+   +----------------------------------------------------------------------------+ */
+/* NOTE: All heights are em-based! */
+.list-group li:not(.list-nested-item),
+.list-tree li:not(.list-nested-item),
+.list-group li.list-nested-item > .list-item,
+.list-tree li.list-nested-item > .list-item {
+  line-height: @size-treeview-height;
+}
+
+.list-group .selected::before,
+.list-tree .selected::before {
+  height: @size-treeview-height;
+}
+/* +----------------------------------------------------------------------------+
+   + List - Icon                                                          [3.0] +
+   +----------------------------------------------------------------------------+ */
+.list-group .icon,
+.list-tree .icon {
+  display: inline-block;
+  height: inherit;
+
+  &::before {
+    top: initial;
+    line-height: inherit;
+    height: inherit;
+    vertical-align: top;
+  }
+}
+  /* +----------------------------------------------------------------------[3.0]-+ */
+/* +------------------------------------------------------------------------[3]-+ */

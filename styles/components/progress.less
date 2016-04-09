@@ -1,0 +1,110 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Progress                        +
+project   northem-dark-atom-ui            +
+file      progress.less                   +
+version   0.5.0                           +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:09 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines style classes for progress components.
+
+[Index]
+  (1) Bar
+  (2) Spinner
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Bar                                                                    [1] +
+   +----------------------------------------------------------------------------+ */
+progress {
+  -webkit-appearance: none;
+  height: @size-progress-height;
+  border-radius: @component-border-radius;
+
+  background-color: @input-background-color;
+  box-shadow: inset 0 0 0 1px @input-border-color;
+
+  background-image: linear-gradient(-45deg, transparent 33%, @color-progress-buffer 33%, @color-progress-buffer 66%, transparent 66%);
+  background-size: 25px @size-progress-height, 100% 100%, 100% 100%;
+  -webkit-animation: animate-stripes 5s linear infinite;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  border-radius: @component-border-radius;
+  background-color: @color-progress-background;
+}
+
+progress[value] {
+  background-image: none;
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes animate-stripes {
+   100% { background-position: -100px 0px; }
+}
+/* +------------------------------------------------------------------------[1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Spinner                                                                [2] +
+   +----------------------------------------------------------------------------+ */
+.loading-spinner(@size) {
+  width: @size;
+  height: @size;
+  display: block;
+
+  background-image: url(images/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.inline-block {
+    display: inline-block;
+  }
+}
+
+.loading-spinner-large {
+  .loading-spinner(64px);
+}
+
+.loading-spinner-medium {
+  .loading-spinner(50px);
+}
+
+.loading-spinner-small {
+  .loading-spinner(32px);
+}
+
+.loading-spinner-tiny {
+  .loading-spinner(20px);
+}
+/* +------------------------------------------------------------------------[2]-+ */

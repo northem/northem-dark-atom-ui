@@ -35,12 +35,12 @@ Visit the [official website](http://arcticicestudio.com/northem) (actually under
   - <a href="https://atom.io/packages/markdown-preview"><img src="https://avatars0.githubusercontent.com/u/1089146" width=16 height=16/> `markdown-preview@^0.157.0`</a>
 
 ### Version
-[`0.0.0`](https://github.com/arcticicestudio/northem-dark-atom-ui/releases/latest)  
+[`0.5.0`](https://github.com/arcticicestudio/northem-dark-atom-ui/releases/latest)  
 
 For older versions check out the [GitHub Repository](https://github.com/arcticicestudio/northem-dark-atom-ui/releases) or the [official website](http://arcticicestudio.com/northem) (actually under construction).
 
 ### Changelog
-[`0.0.0`](https://github.com/arcticicestudio/northem-dark-atom-ui/blob/master/CHANGELOG.md)
+[`0.5.0`](https://github.com/arcticicestudio/northem-dark-atom-ui/blob/master/CHANGELOG.md)
 
 The changelog can be viewed in the Atom package view via *Settings > Packages* by filtering for `northem-dark-atom-ui`.
 The full changelog is available at the [GitHub Repository](https://github.com/arcticicestudio/northem-dark-atom-ui) and [official website](http://arcticicestudio.com/northem) (actually under construction).

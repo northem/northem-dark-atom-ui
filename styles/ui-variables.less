@@ -1,0 +1,212 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     UI Variables                    +
+project   northem-dark-atom-ui            +
+file      ui-variables.less               +
+version   0.5.0                           +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:26 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file maps all official and hardcoded UI variables to the custom definded
+  - color variables of the "colors.less" file
+  - size variables of the "sizes.less" file
+and sets the global font font families.
+
+[Index]
+  (1) Imports
+  (2) Color
+    (2.0) Background
+    (2.1) Base
+    (2.2) Button
+    (2.3) Input
+    (2.4) Information Level
+    (2.5) Overlay
+    (2.6) Pane
+    (2.7) Panel
+    (2.8) Site
+    (2.9) Tab
+    (2.10) Text
+    (2.11) Treeview
+  (3) Size
+    (3.0) Component
+    (3.1) Tab
+    (3.2) Text
+  (4) Font
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Imports                                                                [1] +
+   +----------------------------------------------------------------------------+ */
+@import "northem-dark";
+@import "colors";
+@import "sizes";
+/* +------------------------------------------------------------------------[1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color                                                                  [2] +
+   +----------------------------------------------------------------------------+ */
+/* +----------------------------------------------------------------------------+
+   + Color - Background                                                   [2.0] +
+   +----------------------------------------------------------------------------+ */
+@app-background-color:        @color-base-background;
+@background-color-error:      @color-background-level-error;
+@background-color-highlight:  @color-background-highlight;
+@background-color-info:       @color-background-level-info;
+@background-color-selected:   @color-background-selected;
+@background-color-success:    @color-background-level-success;
+@background-color-warning:    @color-background-level-warning;
+/* +----------------------------------------------------------------------[2.0]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Base                                                         [2.1] +
+   +----------------------------------------------------------------------------+ */
+@base-background-color:  @color-base-background;
+@base-border-color:      @color-base-border;
+/* +----------------------------------------------------------------------[2.1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Button                                                       [2.2] +
+   +----------------------------------------------------------------------------+ */
+@button-background-color:           @color-button-background;
+@button-background-color-hover:     @color-button-background-hover;
+@button-background-color-selected:  @color-button-background-selected;
+@button-border-color:               @color-base-border;
+/* +----------------------------------------------------------------------[2.2]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Input                                                        [2.3] +
+   +----------------------------------------------------------------------------+ */
+@input-background-color:  @color-input-background;
+@input-border-color:      @color-base-border;
+/* +----------------------------------------------------------------------[2.3]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Information Level                                            [2.4] +
+   +----------------------------------------------------------------------------+ */
+@text-color-error:    @color-text-level-error;
+@text-color-info:     @color-text-level-info;
+@text-color-success:  @color-text-level-success;
+@text-color-warning:  @color-text-level-warning;
+/* +----------------------------------------------------------------------[2.4]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Overlay                                                      [2.5] +
+   +----------------------------------------------------------------------------+ */
+@overlay-background-color:  @color-base-background;
+@overlay-border-color:      @color-base-border;
+/* +----------------------------------------------------------------------[2.5]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Pane                                                         [2.6] +
+   +----------------------------------------------------------------------------+ */
+@pane-item-background-color:  @color-base-background;
+@pane-item-border-color:      @color-base-border;
+/* +----------------------------------------------------------------------[2.6]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Panel                                                        [2.7] +
+   +----------------------------------------------------------------------------+ */
+@inset-panel-background-color:    @color-panel-inset-background;
+@inset-panel-border-color:        @color-panel-inset-border;
+@panel-heading-background-color:  @color-base-background;
+@panel-heading-border-color:      @color-base-border;
+@tool-panel-background-color:     @color-base-background;
+@tool-panel-border-color:         @color-base-border;
+/* +----------------------------------------------------------------------[2.7]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Site                                                         [2.8] +
+   +----------------------------------------------------------------------------+ */
+@ui-site-color-1: @color-site-1;
+@ui-site-color-2: @color-site-2;
+@ui-site-color-3: @color-site-3;
+@ui-site-color-4: @color-site-4;
+@ui-site-color-5: @color-site-5;
+/* +----------------------------------------------------------------------[2.8]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Tab                                                          [2.9] +
+   +----------------------------------------------------------------------------+ */
+@tab-bar-background-color:     @color-tab-bar-background;
+@tab-background-color:         @color-base-background;
+@tab-bar-border-color:         @color-base-border;
+@tab-background-color-active:  @color-base-background;
+@tab-border-color:             @color-base-border;
+/* +----------------------------------------------------------------------[2.9]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Text                                                        [2.10] +
+   +----------------------------------------------------------------------------+ */
+@text-color:            @color-text;
+@text-color-highlight:  @color-text-highlight;
+@text-color-selected:   @color-text-selected;
+@text-color-subtle:     @color-text-subtle;
+/* +---------------------------------------------------------------------[2.10]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Color - Text                                                        [2.11] +
+   +----------------------------------------------------------------------------+ */
+@tree-view-background-color:  @color-base-background;
+@tree-view-border-color:      @color-base-border;
+/* +---------------------------------------------------------------------[2.11]-+ */
+/* +------------------------------------------------------------------------[2]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Size                                                                   [3] +
+   +----------------------------------------------------------------------------+ */
+/* +----------------------------------------------------------------------------+
+   + Size - Component                                                     [3.0] +
+   +----------------------------------------------------------------------------+ */
+@component-border-radius: @size-component-border-radius;
+@component-icon-padding:  @size-component-icon-padding;
+@component-icon-size:     @size-component-icon;
+@component-line-height:   @size-component-line-height;
+@component-padding:       @size-component-padding;
+/* +----------------------------------------------------------------------[3.0]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Size - Tab                                                           [3.1] +
+   +----------------------------------------------------------------------------+ */
+@tab-height:  @size-tab-height;
+/* +----------------------------------------------------------------------[3.1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Size - Text                                                          [3.2] +
+   +----------------------------------------------------------------------------+ */
+@disclosure-arrow-size:  @size-text;
+@font-size:              @size-text;
+@input-font-size:        @size-text-input;
+/* +----------------------------------------------------------------------[3.2]-+ */
+/* +------------------------------------------------------------------------[3]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Font                                                                   [4] +
+   +----------------------------------------------------------------------------+ */
+@font-family: 'Roboto', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+/* +------------------------------------------------------------------------[4]-+ */
