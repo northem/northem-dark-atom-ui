@@ -1,0 +1,66 @@
+/*
++++++++++++++++++++++++++++++++++++++++++++
+title     Panes                           +
+project   northem-dark-atom-ui            +
+file      panes.less                      +
+version                                   +
+author    Arctic Ice Studio               +
+email     development@arcticicestudio.com +
+website   http://arcticicestudio.com      +
+copyright Copyright (C) 2015-2016         +
+created   2015-04-02 13:13 UTC+0200       +
+modified  2016-02-06 22:08 UTC+0100       +
++++++++++++++++++++++++++++++++++++++++++++
+
+[Description]
+This file defines pane specific style classes.
+
+[Index]
+  (1) Core
+  (2) Preview
+
+[Copyright]
+Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
+
+[License]
+Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
+Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+[References]
+Northem Dark
+  (https://github.com/arcticicestudio/northem-dark)
+Atom API-Documentation
+  (https://atom.io/docs/api/latest/Atom)
+Atom Flight Manual
+  (https://atom.io/docs)
+LESSCSS
+  (http://lesscss.org)
+Modular Scale
+  (http://www.modularscale.com)
+Arctic Versioning Specification (ArcVer)
+  (http://specs.arcticicestudio.com/arcver)
+*/
+/* +----------------------------------------------------------------------------+
+   + Core                                                                   [1] +
+   +----------------------------------------------------------------------------+ */
+atom-pane-container {
+	atom-pane {
+	  position: relative;
+	  padding-top: @component-padding/2;
+
+	  .item-views {
+	    border: 1px solid @pane-item-border-color;
+	    border-top: none;
+	  }
+	}
+}
+/* +------------------------------------------------------------------------[1]-+ */
+
+/* +----------------------------------------------------------------------------+
+   + Preview                                                                [2] +
+   +----------------------------------------------------------------------------+ */
+.preview-pane .results-view .path-match-number {
+  color: inherit;
+  opacity: .6;
+}
+/* +------------------------------------------------------------------------[2]-+ */
