@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/arcticicestudio/northem-dark-atom-ui/issues"
   },
+  "main": "./lib/main",
   "readmeFilename": "README.md",
   "keywords": [
     "northem",
