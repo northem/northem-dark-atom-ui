@@ -1,134 +1,151 @@
 /*
-+++++++++++++++++++++++++++++++++++++++++++
-title     UI Mixins                       +
-project   northem-dark-atom-ui            +
-file      ui-minxins.less                 +
-version   0.5.0                           +
-author    Arctic Ice Studio               +
-email     development@arcticicestudio.com +
-website   http://arcticicestudio.com      +
-copyright Copyright (C) 2015-2016         +
-created   2015-04-02 13:13 UTC+0200       +
-modified  2016-02-06 22:23 UTC+0100       +
-+++++++++++++++++++++++++++++++++++++++++++
-
-[Description]
-This file defines style class mixins (rule-sets).
-
-[Index]
-  (1) Text
-    (1.0) Appearance
-    (1.1) Highlighting
-    (1.2) Information Level
-  (2) Package Support
-    (2.0) autocomplete-plus
-  (3) State
-  (4) Color Manipulation
-
-[Copyright]
-Copyright (C) 2015-2016 Arctic Ice Studio <development@arcticicestudio.com>
-
-[License]
-Northem code is licensed under "GPL 3.0" (http://www.gnu.org/licenses/gpl.txt).
-Northem color palette itself is licensed under "CC BY-SA 4.0" (http://creativecommons.org/licenses/by-sa/4.0/).
-
-[References]
-Northem Dark
-  (https://github.com/arcticicestudio/northem-dark)
-Atom API-Documentation
-  (https://atom.io/docs/api/latest/Atom)
-Atom Flight Manual
-  (https://atom.io/docs)
-LESSCSS
-  (http://lesscss.org)
-Modular Scale
-  (http://www.modularscale.com)
-Arctic Versioning Specification (ArcVer)
-  (http://specs.arcticicestudio.com/arcver)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+title      UI Mixins                                               +
+project    northem-dark-atom-ui                                    +
+repository https://github.com/arcticicestudio/northem-dark-atom-ui +
+author     Arctic Ice Studio                                       +
+email      development@arcticicestudio.com                         +
+copyright  Copyright (C) 2016                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
-/* +----------------------------------------------------------------------------+
-   + Text                                                                   [1] +
-   +----------------------------------------------------------------------------+ */
-.text(normal) {
-  font-weight: normal;
+/*+++++++++++
+  + Buttons +
+  +++++++++++*/
+.button(@color) {
   color: @text-color;
-}
-/* +----------------------------------------------------------------------------+
-   + Text - Appearance                                                    [1.0] +
-   +----------------------------------------------------------------------------+ */
-.text(subtle) {
-  font-weight: normal;
-  color: @text-color-subtle;
-}
-.text(selected) {
-  .text(highlight)
-}
-/* +----------------------------------------------------------------------[1.0]-+ */
-
-/* +----------------------------------------------------------------------------+
-   + Text - Highlighting                                                  [1.1] +
-   +----------------------------------------------------------------------------+ */
-.text(highlight) {
-  font-weight: normal;
-  color: @text-color-highlight;
-}
-
-.highlight-mixin {
-  padding: 1px 4px;
-  font-weight: bold;
-  text-shadow: none;
+  font-size: 12px;
+  font-weight: 400;
+  background: transparent;
+  height: @input-height;
+  line-height: @input-height;
   border-radius: @component-border-radius;
-  color: @text-color-highlight;
-}
-/* +----------------------------------------------------------------------[1.1]-+ */
+  border-color: @color;
+  border-width: 1px !important;
+  border-style: solid !important;
+  box-shadow: none !important;
+  transition: all @transition-time ease;
+  padding: 0 10px;
 
-/* +----------------------------------------------------------------------------+
-   + Text - Information Level                                             [1.2] +
-   +----------------------------------------------------------------------------+ */
-.text(info) {
-  color: @text-color-info;
-}
-.text(success) {
-  color: @text-color-success;
-}
-.text(warning) {
-  color: @text-color-warning;
-}
-.text(error) {
-  color: @text-color-error;
-}
-/* +----------------------------------------------------------------------[1.2]-+ */
-/* +------------------------------------------------------------------------[1]-+ */
+  &:focus {
+    outline: none;
+  }
 
-/* +----------------------------------------------------------------------------+
-   + Package Support                                                        [2] +
-   +----------------------------------------------------------------------------+ */
-/* +----------------------------------------------------------------------------+
-   + Package Support - autocomplete-plus                                  [2.0] +
-   +----------------------------------------------------------------------------+ */
-.packagesupport-autocomplete-icon(@color) {
-  color: @color;
-  background: fade(@color, 20%);
-}
-/* +----------------------------------------------------------------------[2.0]-+ */
-/* +------------------------------------------------------------------------[2]-+ */
+  &:focus,
+  &:hover {
+    color: @base-background-color !important;
+    background: @color !important;
+    border-color: @color !important;
+  }
 
-/* +----------------------------------------------------------------------------+
-   + State                                                                  [3] +
-   +----------------------------------------------------------------------------+ */
-.focus() {
-  outline: none;
-  border-color: @color-base-border;
-  box-shadow: 0 0 0 1px @color-base-background;
-}
-/* +------------------------------------------------------------------------[3]-+ */
+  &:active,
+  &:active:focus {
+    color: @base-background-color;
+    background: @color;
+    border: 1px solid @text-color-selected !important;
+  }
 
-/* +----------------------------------------------------------------------------+
-   + Color Manipulation                                                     [4] +
-   +----------------------------------------------------------------------------+ */
-.ui-site(@num, @color) {
-  .ui-site-@{num} {
-    background-color: @color;
+  &.selected {
+    color: @base-background-color;
+    background: @button-background-color-selected;
+    border: 1px solid @color !important;
+
+    &:hover {
+      color: @base-background-color !important;
+      border: 1px solid @text-color-highlight !important;
+      background: @color !important;
+    }
+  }
+
+  &[disabled],
+  &.disabled {
+    opacity: 1;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: @text-color-subtle !important;
   }
 }
-/* +------------------------------------------------------------------------[4]-+ */
+
+.button-variant(@color) {
+  .button(@color);
+  color: @color !important;
+  border-color: @color !important;
+  background: transparent;
+
+  &:hover {
+    border-color: @color !important;
+  }
+
+  &.selected {
+    color: @base-background-color !important;
+    background: @color !important;
+  }
+
+  &[disabled],
+  &.disabled {
+    opacity: 1;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: @text-color-subtle !important;
+  }
+}
+
+/*++++++++
+  + Text +
+  ++++++++*/
+.text(error) {
+  .text(normal);
+  color: @text-color-error;
+}
+
+.text(heading) {
+  color: @text-color;
+  font-family: @font-family;
+  font-weight: 200;
+}
+
+.text(highlight) {
+  .text(normal);
+  font-size: inherit;
+  color: @text-color-highlight;
+}
+
+.text(info) {
+  .text(normal);
+  color: @text-color-info;
+}
+
+.text(normal) {
+  color: @text-color;
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: 400;
+}
+
+.text(selected) {
+  .text(normal);
+  font-size: inherit;
+  color: @text-color-selected;
+}
+
+.text(subtle) {
+  .text(normal);
+  font-size: inherit;
+  color: @text-color-subtle;
+}
+
+.text(success) {
+  .text(normal);
+  color: @text-color-success;
+}
+
+.text(warning) {
+  .text(normal);
+  color: @text-color-warning;
+}
+
+/*+++++++++++
+  + Overlay +
+  +++++++++++*/
+.overlay-shadow() {
+  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.4) !important;
+}
