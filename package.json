@@ -1,8 +1,8 @@
 {
   "name": "northem-dark-atom-ui",
   "theme": "ui",
-  "version": "0.4.0",
-  "description": "A north-bluish dark theme based on the same named color palette designed by Arctic Ice Studio. This is a darker and more blue-tinged variation.",
+  "version": "2.0.0",
+  "description": "A north-bluish, dark clean and elegant minimal Atom UI.",
   "author": {
     "name": "Arctic Ice Studio",
     "email": "development@arcticicestudio.com"
@@ -15,15 +15,27 @@
   "bugs": {
     "url": "https://github.com/arcticicestudio/northem-dark-atom-ui/issues"
   },
+  "main": "./lib/main",
   "readmeFilename": "README.md",
   "keywords": [
     "northem",
+    "north",
     "bluish",
     "dark",
+    "clean",
+    "elegant",
     "ui"
   ],
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
+  },
+  "configSchema": {
+    "tabSizing": {
+      "title": "Full-Width Tab Sizing",
+      "description": "In full width mode, tabs will fill the whole tab bar.",
+      "type": "boolean",
+      "default": true
+    }
   }
 }
