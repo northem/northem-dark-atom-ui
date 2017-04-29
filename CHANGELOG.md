@@ -1,8 +1,21 @@
 <p align="center"><img src="https://cdn.rawgit.com/arcticicestudio/northem-dark-atom-ui/develop/assets/northem-dark-atom-ui-banner.svg"/></p>
 
-<p align="center"><img src="https://assets-cdn.github.com/favicon.ico" width=24 height=24/> <a href="https://github.com/arcticicestudio/northem-dark-atom-ui/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/northem-dark-atom-ui.svg"/></a> <a href="https://github.com/arcticicestudio/northem-dark/releases/tag/v2.0.0"><img src="https://img.shields.io/badge/Northem_Dark-v2.0.0-blue.svg"/></a> <img src="https://atom.io/favicon.ico" width=24 height=24/> <a href="https://atom.io/themes/northem-dark-atom-ui"><img src="https://img.shields.io/apm/v/northem-dark-atom-ui.svg"/></a> <a href="https://atom.io/themes/northem-dark-atom-ui"><img src="https://img.shields.io/apm/dm/northem-dark-atom-ui.svg"/></a></p>
+<p align="center"><img src="https://assets-cdn.github.com/favicon.ico" width=24 height=24/> <a href="https://github.com/arcticicestudio/northem-dark-atom-ui/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/northem-dark-atom-ui.svg"/></a> <a href="https://github.com/arcticicestudio/northem-dark/releases/tag/v2.0.0"><img src="https://img.shields.io/badge/Northem_Dark-v2.0.0-blue.svg"/></a> <img src="https://atom.io/favicon.ico" width=24 height=24/> <a href="https://github.com/atom/atom/releases/tag/v1.13.0"><img src="https://img.shields.io/badge/Atom->=v1.13.0-5FB57D.svg"/></a> <a href="https://atom.io/themes/northem-dark-atom-ui"><img src="https://img.shields.io/apm/v/northem-dark-atom-ui.svg"/></a> <a href="https://atom.io/themes/northem-dark-atom-ui"><img src="https://img.shields.io/apm/dm/northem-dark-atom-ui.svg"/></a></p>
 
 ---
+
+# 2.1.0
+*2017-04-29*
+
+**Please note that the minimal version for this theme is now `>=1.13.0` due to the Atom theme API change!**
+
+## Improvements
+❯ Migrated to the new Atom theme API.  
+Starting from Atom version 1.13, the contents of `atom-text-editor` [elements are no longer encapsulated within a shadow DOM boundary](http://blog.atom.io/2016/11/14/removing-shadow-dom-boundary-from-text-editor-elements.html).  
+This means the `:host` and `::shadow` pseudo-selectors should be completely removed and all syntax selectors should be prepended with `syntax--`.
+To prevent breakage with existing style sheets, Atom will automatically upgrade selectors for versions less or equal to 1.12. (@arcticicestudio, #10 PR #11, 906555b0)
+
+![](http://blog.atom.io/img/posts/shadow-dom.png)
 
 # 2.0.0 (2016-11-10)
 **The whole project has been cleaned up and rewritten to adapt the codebase of the [Nord Atom UI](https://github.com/arcticicestudio/nord-atom-ui) project!**
